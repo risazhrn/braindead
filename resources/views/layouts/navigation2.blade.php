@@ -5,25 +5,27 @@
             <div class="row align-items-center">
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                     <div class="logo"><a href="/">
-                        <h3 style="font-weight:900">BRAINDEAD</h3>
-                    </a>
+                            <h3 style="font-weight:900">BRAINDEAD</h3>
+                        </a>
                     </div>
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-6 d-none d-lg-block">
                     <div class="main-menu d-flex justify-content-end">
                         <nav id="mobile-menu">
                             <ul>
-                                
-                                <li>
-                                    <div class="hero__search-inner">
-                                        <div class="hero__search-input">
-                                            <span><i class="far fa-search"></i></span>
-                                            <input type="text" placeholder="Cari pertanyaanmu..">
+                                @if (!request()->is('/'))
+                                    <li>
+                                        <div class="hero__search-inner">
+                                            <div class="hero__search-input">
+                                                <span><i class="far fa-search"></i></span>
+                                                <input id="search" value="{{ request()->search }}" type="text"
+                                                    placeholder="Cari pertanyaanmu..">
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
+                                @endif
                                 <li class="">
-                                    <a href="{{route('ask')}}">Ask Question</a>
+                                    <a href="{{ route('question.create') }}">Ask Question</a>
                                 </li>
                             </ul>
                         </nav>
@@ -34,12 +36,13 @@
 
                         @auth
                             <div class="header__login header__login-2 d-none d-sm-block dropdown">
-                                <a class="" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a>
-                            
+                                <a class="" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i
+                                        class="fa fa-user"></i> {{ Auth::user()->name }}</a>
+
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="{{route('profile.edit')}}">Profile</a></li>
-                                    <li><a class="dropdown-item" href="{{route('dashboard')}}">My Question</a></li>
-                                  </ul>
+                                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('myQuestion') }}">My Question</a></li>
+                                </ul>
                             </div>
                             <div class="header__btn d-none d-xl-block">
                                 <form action="{{ route('logout') }}" method="post">

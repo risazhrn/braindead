@@ -107,6 +107,14 @@
             }).catch(swal.noop);
         @endif
     </script>
+    <script type="text/javascript">
+        $('#search').keypress((e) => {
+            if (e.keyCode == 13) {
+                let url = '{{ route('question', ['search' => '$1']) }}'
+                location.href = url.replace('%241', $('#search').val())
+            }
+        })
+    </script>
 </body>
 
 </html>

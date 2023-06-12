@@ -23,15 +23,16 @@
                                 <span>MALU BERTANYA</span><br>
                                 SESAT DI JALAN
                             </h2>
-                            <p>Braindead adalah sebuah tempat untuk berdiskusi bersama dan menyelesaikan permasalahan yang rumit.</p>
+                            <p>Braindead adalah sebuah tempat untuk berdiskusi bersama dan menyelesaikan permasalahan
+                                yang rumit.</p>
                             <div class="hero__search">
-                                <form action="#">
+                                <form action="{{ route('question') }}" method="GET">
                                     <div class="hero__search-inner d-xl-flex">
                                         <div class="hero__search-input">
                                             <span><i class="far fa-search"></i></span>
-                                            <input type="text" placeholder="Apa pertanyaanmu?">
+                                            <input name="search" type="text" placeholder="Apa pertanyaanmu?">
                                         </div>
-                                        <button type="submit" class="m-btn ml-20"> <span></span> search</button>
+                                        <button type="submit" class="m-btn ml-20">search</button>
                                     </div>
                                 </form>
                             </div>
@@ -49,6 +50,6 @@
         </section>
         <!-- hero area end -->
 
-        
+
     </main>
 </x-guest-layout>

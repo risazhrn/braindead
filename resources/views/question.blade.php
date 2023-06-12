@@ -17,11 +17,11 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="page__title-content mb-50">
-                        <h2 class="page__title">My Question</h2>
+                        <h2 class="page__title">List Question</h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">My Question</li>
+                                <li class="breadcrumb-item active" aria-current="page">Question</li>
                             </ol>
                         </nav>
                     </div>
@@ -40,33 +40,13 @@
                         @forelse ($questions as $question)
                             <article class="postbox__item format-image fix mb-50 wow fadeInUp" data-wow-delay=".2s">
                                 <div class="postbox__content">
-                                    <div class="mb-10 d-flex justify-content-between">
-                                        <div class="d-flex postbox__meta">
-                                            <div class="postbox__tag mr-20">
-                                                <a href="#">{{ $question->category->name }}</a>
-                                            </div>
-                                            <div class="postbox__date">
-                                                <span><i
-                                                        class="fal fa-clock"></i>{{ $question->created_at->diffForHumans() }}</span>
-                                            </div>
+                                    <div class="postbox__meta d-flex mb-10">
+                                        <div class="postbox__tag mr-20">
+                                            <a href="#">{{ $question->category->name }}</a>
                                         </div>
-                                        <div class="dropdown">
-                                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                Aksi
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item"
-                                                        href="{{ route('question.edit', $question) }}">Edit</a></li>
-                                                <li>
-                                                    <form action="{{ route('question.destroy', $question) }}"
-                                                        method="post">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button class="dropdown-item" type="submit">Hapus</button>
-                                                    </form>
-                                                </li>
-                                            </ul>
+                                        <div class="postbox__date">
+                                            <span><i
+                                                    class="fal fa-clock"></i>{{ $question->created_at->diffForHumans() }}</span>
                                         </div>
                                     </div>
                                     <h3 class="postbox__title mb-15"><a
@@ -120,7 +100,7 @@
                                     <div class="tags">
                                         @foreach ($categories as $category)
                                             <a
-                                                href="{{ route('question', ['question' => $category->name]) }}">{{ $category->name }}</a>
+                                                href="{{ route('question', ['category' => $category->name]) }}">{{ $category->name }}</a>
                                         @endforeach
                                     </div>
                                 </div>

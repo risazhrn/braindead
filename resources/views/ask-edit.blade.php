@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-xxl-12">
                     <div class="page__title-wrapper mb-55">
-                        <h2 class="page__title-2">Ask Your Question</h2>
+                        <h2 class="page__title-2">Edit Your Question</h2>
                     </div>
                 </div>
             </div>
@@ -30,17 +30,17 @@
                 <div class="col">
                     <div class="contact__wrapper  white-bg">
                         <div class="contact__form">
-                            <form action="{{ route('question.add') }}" method="POST">
+                            <form action="{{ route('question.update', $question) }}" method="POST">
                                 @csrf
                                 <div class="row">
                                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
                                         <div class="contact__input-wrapper mb-25">
                                             <h5>Kategori Subject</h5>
                                             <div class="contact__input">
-                                                <select name="category" class="form-select">
-                                                    <option selected>Open this select menu</option>
+                                                <select name="category" value="" class="form-select">
                                                     @foreach ($categories as $category)
-                                                        <option value="{{ $category->id }}">{{ $category->name }}
+                                                        <option @if ($question->category->name === $category->name) selected @endif
+                                                            value="{{ $category->id }}">{{ $category->name }}
                                                         </option>
                                                     @endforeach
                                                 </select>
@@ -53,7 +53,7 @@
                                             <div class="contact__input-wrapper mb-25">
                                                 <h5>Question</h5>
                                                 <div class="contact__input textarea">
-                                                    <textarea placeholder="Enter your question.." name="question"></textarea>
+                                                    <textarea placeholder="Enter your question.." name="question">{{ $question->value }}</textarea>
                                                     <i class="fal fa-comment"></i>
                                                 </div>
                                             </div>
