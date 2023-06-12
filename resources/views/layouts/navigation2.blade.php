@@ -91,11 +91,20 @@
                 </a>
             </div>
             <div class="mobile-menu"></div>
+            @auth
+            <div class="sidebar__action mt-50">
+                <div class="sidebar__login mt-15">
+                    <a href="{{ route('logout') }}"><i class="far fa-sign-out"></i> Log Out</a>
+                </div>
+            </div>
+            @endauth
+            @guest
             <div class="sidebar__action mt-50">
                 <div class="sidebar__login mt-15">
                     <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
                 </div>
             </div>
+            @endguest
         </div>
     </div>
 </div>
