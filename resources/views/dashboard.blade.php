@@ -74,7 +74,8 @@
                                     </h3>
                                     <div class="postbox__author d-flex align-items-center">
                                         <div class="postbox__author-thumb mr-15">
-                                            <img src="assets/img/blog/author/blog-author-1.jpg" alt="">
+                                            <img src="https://ui-avatars.com/api/?name={{ $question->user->name }}"
+                                                alt="">
                                         </div>
                                         <h5>Created by <a href="#">{{ $question->user->name }}</a> </h5>
                                     </div>
