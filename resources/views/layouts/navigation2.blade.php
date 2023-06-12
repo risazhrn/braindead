@@ -4,8 +4,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
-                    <div class="logo">
+                    <div class="logo"><a href="/">
                         <h3 style="font-weight:900">BRAINDEAD</h3>
+                    </a>
                     </div>
                 </div>
                 <div class="col-xxl-7 col-xl-7 col-lg-6 d-none d-lg-block">
@@ -71,7 +72,7 @@
         </div>
         <div class="sidebar__content">
             <div class="logo mb-40">
-                <a href="#">
+                <a href="/">
                     <h3 style="font-weight:900;color: white">BRAINDEAD</h3>
                 </a>
             </div>
