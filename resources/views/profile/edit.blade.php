@@ -37,7 +37,7 @@
         <div class="container">
             @include('profile.partials.update-profile-information-form')
         </div>
-        <div class="container">
+        <div class="container mb-145">
             @include('profile.partials.update-password-form')
         </div>
      </section>
