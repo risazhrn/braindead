@@ -37,8 +37,8 @@
                                 <a class="" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a>
                             
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">My Question</a></li>
+                                    <li><a class="dropdown-item" href="{{route('profile.edit')}}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="{{route('dashboard')}}">My Question</a></li>
                                   </ul>
                             </div>
                             <div class="header__btn d-none d-xl-block">

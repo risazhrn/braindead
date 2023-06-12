@@ -5,18 +5,18 @@
 
     <!-- bg shape area start -->
     <div class="bg-shape">
-        <img src="assets/img/shape/shape-1.png" alt="">
+        <img src="{{asset('/img/shape/shape-1.png')}}" alt="">
      </div>
      <!-- bg shape area end -->
 
      <!-- contact area start -->
      <section class="contact__area pt-105 pb-145">
         <div class="contact__shape">
-           <img class="man-1" src="assets/img/icon/sign/man-1.png" alt="">
-           <img class="circle" src="assets/img/icon/sign/circle.png" alt="">
-           <img class="zigzag" src="assets/img/icon/sign/zigzag.png" alt="">
-           <img class="dot" src="assets/img/icon/sign/dot.png" alt="">
-           <img class="bg" src="assets/img/icon/sign/sign-up.png" alt="">
+            <img class="man-1" src="{{asset('/img/icon/sign/man-1.png')}}" alt="">
+            <img class="circle" src="{{asset('/img/icon/sign/circle.png')}}" alt="">
+            <img class="zigzag" src="{{asset('/img/icon/sign/zigzag.png')}}" alt="">
+            <img class="dot" src="{{asset('/img/icon/sign/dot.png')}}" alt="">
+            <img class="bg" src="{{asset('/img/icon/sign/sign-up.png')}}" alt="">
         </div>
         <div class="container">
            <div class="row">
