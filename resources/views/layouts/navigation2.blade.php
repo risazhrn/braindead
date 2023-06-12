@@ -13,8 +13,17 @@
                     <div class="main-menu d-flex justify-content-end">
                         <nav id="mobile-menu">
                             <ul>
+                                
+                                <li>
+                                    <div class="hero__search-inner">
+                                        <div class="hero__search-input">
+                                            <span><i class="far fa-search"></i></span>
+                                            <input type="text" placeholder="Cari pertanyaanmu..">
+                                        </div>
+                                    </div>
+                                </li>
                                 <li class="">
-                                    <a href="#">Ask Question</a>
+                                    <a href="{{route('ask')}}">Ask Question</a>
                                 </li>
                             </ul>
                         </nav>
@@ -24,8 +33,13 @@
                     <div class="header__action d-flex align-items-center justify-content-end">
 
                         @auth
-                            <div class="header__login header__login-2 d-none d-sm-block">
-                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a>
+                            <div class="header__login header__login-2 d-none d-sm-block dropdown">
+                                <a class="" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-user"></i> {{ Auth::user()->name }}</a>
+                            
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">My Question</a></li>
+                                  </ul>
                             </div>
                             <div class="header__btn d-none d-xl-block">
                                 <form action="{{ route('logout') }}" method="post">
