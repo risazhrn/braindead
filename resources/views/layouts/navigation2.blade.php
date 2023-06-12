@@ -47,7 +47,7 @@
                             <div class="header__btn d-none d-xl-block">
                                 <form action="{{ route('logout') }}" method="post">
                                     @csrf
-                                    <button class="m-btn m-btn-2" type="submit">Log Out</button>
+                                    <button class="m-btn m-btn-2" type="submit" style="width: 135px">Log Out</button>
                                 </form>
                             </div>
                         @endauth
