@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'BRAINDEAD') }} - {{ $title }}</title>
+    <title>{{ config('app.name', 'BRAINDEAD') }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Place favicon.ico in the root directory -->
@@ -68,97 +68,6 @@
         {{ $slot }}
     </main>
 
-    <!-- footer area start -->
-    <footer>
-        <div class="footer__area footer-bg">
-            <div class="footer__top pt-90 pb-50">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4">
-                            <div class="footer__widget mb-40 wow fadeInUp" data-wow-delay=".3s">
-                                <div class="footer__widget-head mb-35">
-                                    <h4 class="footer__widget-title">Follow our Socials</h4>
-                                </div>
-                                <div class="footer__widget-content">
-                                    <div class="footer__social mb-30">
-                                        <ul>
-                                            <li><a href="#" class="pin"><i class="fab fa-youtube"></i></a>
-                                            </li>
-                                            <li><a href="https://wa.me/6285156326419?/" class="tw"><i class="fab fa-whatsapp"></i></a>
-                                            </li>
-                                            <li><a href="https://www.instagram.com/seilobdg/" class="fb"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-4">
-                            <div class="footer__widget mb-40 wow fadeInUp footer__pl" data-wow-delay=".7s">
-                                <div class="footer__widget-head">
-                                    <h4 class="footer__widget-title">Resources</h4>
-                                </div>
-                                <div class="footer__widget-content">
-                                    <div class="footer__link">
-                                        <ul>
-                                            <li><a href="#">Promotion </a></li>
-                                            <li><a href="#">Submit Content</a></li>
-                                            <li><a href="#">Resources</a></li>
-                                            <li><a href="#">Design System</a></li>
-                                            <li><a href="#">Expert</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4">
-                            <div class="footer__widget mb-40 wow fadeInUp" data-wow-delay=".9s">
-                                <div class="footer__widget-head">
-                                    <h4 class="footer__widget-title">Products</h4>
-                                </div>
-                                <div class="footer__widget-content">
-                                    <div class="footer__link">
-                                        <ul>
-                                            <li><a href="#">About Us</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Support</a></li>
-                                            <li><a href="#">Pricing</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-4">
-                            <div class="footer__widget mb-40 wow fadeInUp" data-wow-delay="1.2s">
-                                <div class="footer__widget-head">
-                                    <h4 class="footer__widget-title">Community</h4>
-                                </div>
-                                <div class="footer__widget-content">
-                                    <div class="footer__link">
-                                        <ul>
-                                            <li><a href="#">Forums</a></li>
-                                            <li><a href="#">Community</a></li>
-                                            <li><a href="#">Meetups</a></li>
-                                            <li><a href="#">Jobs</a></li>
-                                            <li><a href="#">Careers</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </footer>
-    <!-- footer area end -->
 
     <!-- JS here -->
     <script src="{{ asset('js/vendor/jquery-3.5.1.min.js') }}"></script>
