@@ -3,6 +3,8 @@
 use App\Http\Controllers\AnswerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
+use App\Models\Category;
+use App\Models\Question;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,9 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', function () {
-    return view('homepage');
+    $questions = Question::orderBy('created_at', 'desc')->limit(5)->get();
+    $categories = Category::all();
+    return view('homepage', compact('questions', 'categories'));
 })->name('home');
 
 Route::get('/questions', [QuestionController::class, 'index'])->name('question');
