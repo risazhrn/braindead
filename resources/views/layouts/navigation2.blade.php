@@ -95,18 +95,22 @@
             </div>
             <div class="mobile-menu"></div>
             @auth
-            <div class="sidebar__action mt-50">
-                <div class="sidebar__login mt-15">
-                    <a href="{{ route('logout') }}"><i class="far fa-sign-out"></i> Log Out</a>
+                <div class="sidebar__action mt-50">
+                    <div class="sidebar__login mt-15">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            <button class="btn" type="submit" style="color: white">Log
+                                Out</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
             @endauth
             @guest
-            <div class="sidebar__action mt-50">
-                <div class="sidebar__login mt-15">
-                    <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
+                <div class="sidebar__action mt-50">
+                    <div class="sidebar__login mt-15">
+                        <a href="{{ route('login') }}"><i class="far fa-unlock"></i> Log In</a>
+                    </div>
                 </div>
-            </div>
             @endguest
         </div>
     </div>
