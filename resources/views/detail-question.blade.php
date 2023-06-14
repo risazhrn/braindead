@@ -25,7 +25,8 @@
                             <ul class="d-flex align-items-center">
                                 <li>
                                     <div class="postbox__author-thumb-2">
-                                        <img src="https://ui-avatars.com/api/?name={{ $question->user->name }}" alt="">
+                                        <img src="https://ui-avatars.com/api/?name={{ $question->user->name }}"
+                                            alt="">
                                     </div>
                                 </li>
                                 <li>
@@ -60,7 +61,8 @@
                                         <div class="comments-box grey-bg-2">
                                             <div class="comments-info d-flex">
                                                 <div class="comments-avatar mr-15">
-                                                    <img src="https://ui-avatars.com/api/?name={{ $answer->user->name }}" alt="">
+                                                    <img src="https://ui-avatars.com/api/?name={{ $answer->user->name }}"
+                                                        alt="">
                                                 </div>
                                                 <div class="avatar-name">
                                                     <h5>{{ $answer->user->name }}</h5>
@@ -77,37 +79,35 @@
                                 @endforelse
                             </ul>
                         </div>
-                        @auth
-                            <div class="comment__wrapper p-relative white-bg">
-                                <div class="comment__shape">
-                                    <img class="circle" src="assets/img/icon/sign/circle.png" alt="">
-                                    <img class="zigzag" src="assets/img/icon/sign/zigzag.png" alt="">
-                                    <img class="dot" src="assets/img/icon/sign/dot.png" alt="">
-                                </div>
-                                <h3>Post your answer</h3>
-                                <div class="comment__form mt-35">
-                                    <form action="{{ route('question.answer.add', $question) }}" method="POST">
-                                        @csrf
-                                        <div class="row">
-                                            <div class="col-xxl-12">
-                                                <div class="comment__input-wrapper mb-25">
-                                                    <h5>Answer</h5>
-                                                    <div class="comment__input textarea">
-                                                        <textarea name="answer" placeholder="Enter your answer.."></textarea>
-                                                        <i class="fal fa-comment"></i>
-                                                    </div>
+                        <div class="comment__wrapper p-relative white-bg">
+                            <div class="comment__shape">
+                                <img class="circle" src="assets/img/icon/sign/circle.png" alt="">
+                                <img class="zigzag" src="assets/img/icon/sign/zigzag.png" alt="">
+                                <img class="dot" src="assets/img/icon/sign/dot.png" alt="">
+                            </div>
+                            <h3>Post your answer</h3>
+                            <div class="comment__form mt-35">
+                                <form action="{{ route('question.answer.add', $question) }}" method="POST">
+                                    @csrf
+                                    <div class="row">
+                                        <div class="col-xxl-12">
+                                            <div class="comment__input-wrapper mb-25">
+                                                <h5>Answer</h5>
+                                                <div class="comment__input textarea">
+                                                    <textarea name="answer" placeholder="Enter your answer.."></textarea>
+                                                    <i class="fal fa-comment"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-xxl-12">
-                                                <button type="submit" class="m-btn m-btn-4">submit</button>
-                                            </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xxl-12">
+                                            <button type="submit" class="m-btn m-btn-4">submit</button>
                                         </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                </form>
                             </div>
-                        @endauth
+                        </div>
                     </div>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-4">
