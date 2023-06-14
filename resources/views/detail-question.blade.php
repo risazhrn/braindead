@@ -25,7 +25,7 @@
                             <ul class="d-flex align-items-center">
                                 <li>
                                     <div class="postbox__author-thumb-2">
-                                        <img src="assets/img/blog/author/blog-author-4.jpg" alt="">
+                                        <img src="https://ui-avatars.com/api/?name={{ $question->user->name }}" alt="">
                                     </div>
                                 </li>
                                 <li>
@@ -60,7 +60,7 @@
                                         <div class="comments-box grey-bg-2">
                                             <div class="comments-info d-flex">
                                                 <div class="comments-avatar mr-15">
-                                                    <img src="assets/img/product/support/sup-1.jpg" alt="">
+                                                    <img src="https://ui-avatars.com/api/?name={{ $answer->user->name }}" alt="">
                                                 </div>
                                                 <div class="avatar-name">
                                                     <h5>{{ $answer->user->name }}</h5>
